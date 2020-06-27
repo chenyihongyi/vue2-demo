@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="num++">点赞</button>
+        <button @click="cancle">取消</button>
+        <h1>有{{num}}个赞</h1>
+        <div style="border: 1px solid red; padding: 20px;">
+            大div
+            <div style="border: 1px solid blue;padding: 20px;">
+                小div <br />
+                <a href="http://www.baidu.com">百度一下你就知道</a>
+            </div>
+        </div>
+
+        <input type="text"><br />
+        提示:
+    </div>
+    <script src="../node_modules/vue/dist/vue.js">
+
+    </script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                num: 1
+            },
+            methods: {
+                cancle() {
+                    this.num--;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
